@@ -1,0 +1,22 @@
+name: Build CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.22
+      - name: Download dependencies
+        run: |
+          go mod download
+          go mod tidy
+      - name: Build
+        run: |
+          go build github.com/EnvSync-Cloud/envsync-go-sdk/sdk
