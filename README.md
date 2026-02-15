@@ -1,5 +1,1 @@
-# envsync-go-sdk
-
-This is generated SDK for EnvSync API developed by EnvSync Cloud
-
-## envsync-cloud
+## Codebase migrated to https://github.com/EnvSync-Cloud/envsync
